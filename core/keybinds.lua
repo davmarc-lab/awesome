@@ -53,7 +53,7 @@ return Gears.table.join(
         { description = "open a terminal", group = "launcher" }),
     Awful.key({ Modkey, "Shift" }, "r", awesome.restart,
         { description = "reload awesome", group = "awesome" }),
-    Awful.key({ Modkey, "Shift" }, "e", awesome.quit,
+    Awful.key({ Modkey, "Control" }, "e", awesome.quit,
         { description = "quit awesome", group = "awesome" }),
     Awful.key({ Modkey, }, "l", function() Awful.tag.incmwfact(0.05) end,
         { description = "increase master width factor", group = "layout" }),
