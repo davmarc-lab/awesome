@@ -1,12 +1,16 @@
 require("core.common")
 
+local volume = require("widgets.volume")
+
 return Gears.table.join(
     Awful.key({}, "XF86AudioRaiseVolume", function()
-            Awful.spawn.with_shell("pulsemixer --change-volume +5 --max-volume 100")
+            volume:inc()
+            Naughty.notify { text = "VOL: " .. volume:get_volume() }
         end,
         { description = "increase volume", group = "player" }),
     Awful.key({}, "XF86AudioLowerVolume", function()
-            Awful.spawn.with_shell("pulsemixer --change-volume -5")
+            volume:dec()
+            Naughty.notify { text = "VOL: " .. volume:get_volume() }
         end,
         { description = "decrease volume", group = "player" }),
     Awful.key({}, "XF86AudioMute", function()

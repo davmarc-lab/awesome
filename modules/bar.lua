@@ -93,6 +93,7 @@ Awful.screen.connect_for_each_screen(function(s)
             layout = Wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             Wibox.widget.systray(),
+            -- Awful.widget.watch('pulsemixer --get-volume', 5),
             mytextclock,
             s.mylayoutbox,
         },

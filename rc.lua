@@ -4,6 +4,8 @@ require("core.setup")
 -- awesome theme
 require("themes")
 
+require("startup")
+
 -- awesome layouts
 require("core.layouts")
 

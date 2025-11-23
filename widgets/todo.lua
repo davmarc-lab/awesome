@@ -25,6 +25,11 @@ awful.popup {
                 widget = wibox.widget.textbox
             },
             {
+                markup = "[ ] Manage Volume controls keys with widget (on keybindins call `volume:inc(5)`)",
+                font   = "DejaVuSansM Nerd Font 12",
+                widget = wibox.widget.textbox
+            },
+            {
                 markup = "[ ] Choose a theme",
                 font   = "DejaVuSansM Nerd Font 12",
                 widget = wibox.widget.textbox
@@ -35,8 +40,12 @@ awful.popup {
                 widget = wibox.widget.textbox
             },
             {
-                markup = '<span foreground="red">[ ] Config fn keys (see i3 directory)</span>',
+                markup = '<span foreground="red">[X] Config fn keys (see i3 directory)</span>',
                 font   = "DejaVuSansM Nerd Font 12",
+                widget = wibox.widget.textbox
+            },
+            {
+                text = "",
                 widget = wibox.widget.textbox
             },
             layout = wibox.layout.fixed.vertical,
