@@ -1,0 +1,19 @@
+{
+    "name":"Storm Veil",
+    "colors": {
+        "surface": "#0A0B0E",
+        "surfaceVariant": "#14161A",
+        "primary": "#5B7C99",
+        "secondary": "#7E9AA2",
+        "focus": "#A1B5C8",
+        "error": "#B15A5A"
+    },
+    "onColors": {
+        "surface": "#E0E2E5",
+        "surfaceVariant": "#C3C6CB",
+        "primary": "#E5EBF2",
+        "secondary": "#E1E7EC",
+        "focus": "#0B1116", "error": "#2A1010"
+    },
+    "notes": "kinda"
+}
