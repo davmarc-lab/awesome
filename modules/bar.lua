@@ -79,6 +79,8 @@ Awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = Awful.wibar({ position = "top", screen = s })
 
+    local volume = require("widgets.volume")
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = Wibox.layout.align.horizontal,
@@ -93,7 +95,10 @@ Awful.screen.connect_for_each_screen(function(s)
             layout = Wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             Wibox.widget.systray(),
-            -- Awful.widget.watch('pulsemixer --get-volume', 5),
+            Wibox.widget({
+                text = volume:get_volume(),
+                widget = Wibox.widget.textbox
+            }),
             mytextclock,
             s.mylayoutbox,
         },
